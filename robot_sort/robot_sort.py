@@ -100,25 +100,36 @@ class SortingRobot:
         """
         # Fill this out
 
+        # self.set_light_on()
+        # while self.light_is_on():
+        #     self.swap_item()
+        #     self.set_light_off()
+        #     while self.can_move_right():
+        #         self.move_right()
+        #         if self.compare_item() == -1 or self.compare_item() == 0:
+        #             self.swap_item()
+        #         else:
+        #             self.set_light_on()
+        #     if self.compare_item() == 1:
+        #         self.swap_item()
+        #     while self.can_move_left():
+        #         self.move_left()
+        #         if self.compare_item() == 1:
+        #             self.swap_item()
+        #             # self.set_light_on()
+        #         elif self.compare_item() == None:
+        #             self.swap_item()
         self.set_light_on()
         while self.light_is_on():
             self.swap_item()
-            self.set_light_off()
             while self.can_move_right():
                 self.move_right()
-                if self.compare_item() == -1 or self.compare_item() == 0:
+                if self.compare_item() < 0:
                     self.swap_item()
                 else:
                     self.set_light_on()
-            if self.compare_item() == 1:
-                self.swap_item()
             while self.can_move_left():
                 self.move_left()
-                if self.compare_item() == 1:
-                    self.swap_item()
-                    # self.set_light_on()
-                elif self.compare_item() == None:
-                    self.swap_item()
 
 
 if __name__ == "__main__":
